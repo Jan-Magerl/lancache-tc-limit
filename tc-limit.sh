@@ -55,8 +55,8 @@ function show_status {
 # Display help
 #
 function display_help {
-        echo "Usage: tc [OPTION]"
-        echo -e "\tstart - Apply the tc limit"
+        echo "Usage: tc [OPTION] [BANDWIDTH_RATE]"
+        echo -e "\tstart 10mbit - Apply the tc limit"
         echo -e "\tstop - Remove the tc limit"
         echo -e "\tstatus - Show status"
 }
