@@ -55,8 +55,24 @@ function show_status {
 # Display help
 #
 function display_help {
-        echo "Usage: tc [OPTION] [BANDWIDTH_RATE]"
-        echo -e "\tstart 10mbit - Apply the tc limit"
+        echo "Usage: limit [OPTION] [BANDWIDTH_RATE]"
+        echo -e "\tstart BANDWIDTH_RATE - Apply the tc limit (limit start 100mbit)"
         echo -e "\tstop - Remove the tc limit"
         echo -e "\tstatus - Show status"
 }
+
+# Start
+if [ -n "$2" ]; then
+        download_limit=$2
+fi
+if [ -z "$1" ]; then
+        display_help
+elif [ "$1" == "start" ]; then
+        start_tc
+elif [ "$1" == "stop" ]; then
+        stop_tc
+elif [ "$1" == "status" ]; then
+        show_status
+fi
+
+
