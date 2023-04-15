@@ -9,7 +9,9 @@ git clone https://github.com/Jan-Magerl/lancache-tc-limit
 cd lancache-tc-limit
 chmod +x limit.sh
 chmod +x tc-limit.sh
+nano limit.sh
 ```
+edit location of file tc-limit.sh
 
 ## Usage
 
