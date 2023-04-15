@@ -1,6 +1,7 @@
 # lancache-tc-limit
 Script to set a download rate limit in [lancache.net](https://lancache.net/)
-
+## Dependencies
+Linux kernel modules: `sch_netem` `ifb`
 ## Install
 
 ```
