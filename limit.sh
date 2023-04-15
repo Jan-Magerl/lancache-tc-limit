@@ -14,6 +14,13 @@ function show_status {
         docker exec -it lancache-monolithic-1 /scripts/tc-limit.sh status
 }
 
+function display_help {
+        echo "Usage: limit [OPTION] [BANDWIDTH_RATE]"
+        echo -e "\tstart BANDWIDTH_RATE - Apply the tc limit (limit start 100mbit)"
+        echo -e "\tstop - Remove the tc limit"
+        echo -e "\tstatus - Show status"
+}
+
 # Start
 if [ -n "$2" ]; then
         download_limit=$2
