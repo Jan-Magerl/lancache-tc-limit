@@ -2,7 +2,7 @@
 download_limit=70mbit
 
 function start_tc {
-        docker cp /root/lancache/tc-limit.sh lancache-monolithic-1:/scripts
+        docker cp ~/lancache/lancache-tc-limit/tc-limit.sh lancache-monolithic-1:/scripts
         docker exec -it lancache-monolithic-1 /scripts/tc-limit.sh start $download_limit
 }
 
