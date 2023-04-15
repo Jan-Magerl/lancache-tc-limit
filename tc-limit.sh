@@ -75,4 +75,3 @@ elif [ "$1" == "status" ]; then
         show_status
 fi
 
-
